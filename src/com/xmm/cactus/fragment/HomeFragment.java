@@ -6,16 +6,17 @@ import java.util.List;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.google.gson.Gson;
 import com.squareup.okhttp.Request;
 import com.xmm.cactus.activity.R;
 import com.xmm.cactus.adapter.HomeAdapter;
 import com.xmm.cactus.http.HttpClient;
 import com.xmm.cactus.http.HttpResponseHandler;
 import com.xmm.cactus.model.HomeInfoBean;
-import com.xmm.cactus.model.SearchParam;
 import com.xmm.cactus.ui.pullableview.PullToRefreshLayout;
 import com.xmm.cactus.ui.pullableview.PullToRefreshLayout.OnRefreshListener;
 import com.xmm.cactus.ui.pullableview.PullableListView;
+import com.xmm.cactus.util.HttpParamDataUtils;
 import com.xmm.cactus.util.NetApiRequestUtils;
 
 import android.annotation.SuppressLint;
@@ -35,7 +36,7 @@ import android.view.ViewGroup;
  */
 @SuppressLint("NewApi")
 public class HomeFragment extends Fragment {
-
+	
 	/**
 	 * 首次加载数据
 	 */
@@ -103,8 +104,8 @@ public class HomeFragment extends Fragment {
      */
 	private void initData() {
 		
-		SearchParam param = new SearchParam(page,39.982314,116.409671,"beijing",HttpClient.PAGE_SIZE);
-		NetApiRequestUtils.getHomeDatas(param, new HttpResponseHandler(){
+		String param = HttpParamDataUtils.requestHomeLists(page, "beijing", 39.982314, 116.409671, HttpClient.PAGE_SIZE);
+		NetApiRequestUtils.getHomeDatas(getActivity(), param, new HttpResponseHandler(){
         	@Override
         	public void onSuccess(String content) {
         		JSONObject object = JSON.parseObject(content);
