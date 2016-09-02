@@ -92,6 +92,7 @@ public class AppManager {
    /**
     * 退出应用程序
     */
+   @SuppressWarnings("deprecation")
    public void AppExit(Context context) {
        try {
            finishAllActivity();

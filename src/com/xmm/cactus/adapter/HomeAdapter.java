@@ -5,9 +5,9 @@ import java.util.List;
 import com.bumptech.glide.Glide;
 import com.xmm.cactus.activity.R;
 import com.xmm.cactus.config.NetRequestUrl;
+import com.xmm.cactus.entity.HomeInfoBean;
 import com.xmm.cactus.imageloader.ImageLoader;
 import com.xmm.cactus.imageloader.ImageLoaderUtil;
-import com.xmm.cactus.model.HomeInfoBean;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -78,7 +78,7 @@ public class HomeAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder vh = null;
 		if(convertView == null){
-			convertView = LayoutInflater.from(mContext).inflate(R.layout.home_item, null);
+			convertView = LayoutInflater.from(mContext).inflate(R.layout.layout_home_item, null);
 			vh = new ViewHolder();
 			vh.iv_logo = (ImageView) convertView.findViewById(R.id.iv_logo);
 			vh.tv_name = (TextView) convertView.findViewById(R.id.tv_name);

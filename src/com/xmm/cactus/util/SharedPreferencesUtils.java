@@ -45,7 +45,9 @@ public class SharedPreferencesUtils {
 	public static SharedPreferencesUtils getInstance() {
 		if (instance == null) {
 			synchronized(instance){
-				instance = new SharedPreferencesUtils();
+				if(instance == null){
+					instance = new SharedPreferencesUtils();
+				}
 			}
 		}
 		return instance;

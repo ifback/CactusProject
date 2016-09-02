@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="48dip"
-    android:background="@color/main_header_bg" >
+    android:background="@color/color_EA0717" >
 
     <Button
         android:id="@+id/btn_back"
@@ -22,7 +22,7 @@
         android:maxWidth="180dp"
         android:singleLine="true"
         android:text="仙人掌"
-        android:textColor="@color/text_color_white"
+        android:textColor="@android:color/white"
         android:textSize="@dimen/text_size_20" />
 
 </RelativeLayout>

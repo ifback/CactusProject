@@ -38,7 +38,7 @@
         android:layout_marginBottom="60dp"
         android:background="@drawable/btn_orange"
         android:text="立即进入"
-        android:textColor="@color/white"
+        android:textColor="@android:color/white"
         android:textSize="@dimen/text_size_18"
         android:visibility="gone" />
 

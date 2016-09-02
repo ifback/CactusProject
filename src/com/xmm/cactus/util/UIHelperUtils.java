@@ -1,7 +1,7 @@
 package com.xmm.cactus.util;
 
-import com.xmm.cactus.activity.HomeFragmentActivity;
-import com.xmm.cactus.activity.LoginActivity;
+import com.xmm.cactus.module.main.LoginActivity;
+import com.xmm.cactus.module.main.MainActivity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,7 +37,7 @@ public class UIHelperUtils {
 	}
 
     public static void showHome(Activity context){
-        Intent intent = new Intent(context, HomeFragmentActivity.class);
+        Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
     }
 

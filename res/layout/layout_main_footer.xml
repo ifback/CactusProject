@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layoutFooter"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:background="@color/main_footer_bg">
+    android:layout_height="60dp"
+    android:background="@color/color_F5F5F5" >
 
     <View
         android:id="@+id/viewSplit"
@@ -15,39 +15,44 @@
         android:id="@+id/group"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <RadioButton
             android:id="@+id/rdio_home"
-            style="@style/main_footer_bar_radio"	
+            style="@style/main_footer_bar_radio"
+            android:background="@drawable/tab_selecter_color_bg"
             android:checked="true"
+            android:button="@null"
             android:drawableTop="@drawable/home_bar_bg"
             android:text="@string/main_home" />
 
         <RadioButton
-            android:id="@+id/rdio_choose"
+            android:id="@+id/rdio_media"
             style="@style/main_footer_bar_radio"
-            android:drawableTop="@drawable/choose_bar_bg"
-            android:text="@string/main_choose" />
+            android:background="@drawable/tab_selecter_color_bg"
+            android:drawableTop="@drawable/media_bar_bg"
+            android:text="@string/main_media" />
 
         <RadioButton
-            android:id="@+id/rdio_schedule"
+            android:id="@+id/rdio_find"
             style="@style/main_footer_bar_radio"
-            android:drawableTop="@drawable/schedule_bar_bg"
-            android:text="@string/main_schedule" />
+            android:background="@drawable/tab_selecter_color_bg"
+            android:drawableTop="@drawable/find_bar_bg"
+            android:text="@string/main_find" />
 
         <RadioButton
-            android:id="@+id/rdio_ny"
+            android:id="@+id/rdio_message"
             style="@style/main_footer_bar_radio"
-            android:drawableTop="@drawable/my_bar_bg"
-            android:text="@string/main_my" />
+            android:background="@drawable/tab_selecter_color_bg"
+            android:drawableTop="@drawable/message_bar_bg"
+            android:text="@string/main_message" />
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@null"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
         <View
             android:layout_width="0dp"
@@ -62,14 +67,13 @@
         <View
             android:layout_width="0dp"
             android:layout_height="0dp"
-            
             android:layout_weight="1" />
 
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@null">
+            android:background="@null" >
 
             <View
                 android:id="@+id/viewSplitLine"
@@ -89,10 +93,11 @@
                 android:layout_toRightOf="@+id/viewSplitLine"
                 android:background="@drawable/red_count"
                 android:gravity="center"
-                android:visibility="gone"
                 android:text="1"
                 android:textColor="#ffffff"
-                android:textSize="@dimen/text_size_13" />
+                android:textSize="@dimen/text_size_13"
+                android:visibility="gone" />
         </RelativeLayout>
     </LinearLayout>
+
 </RelativeLayout>
